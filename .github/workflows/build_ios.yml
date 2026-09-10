@@ -8,7 +8,7 @@ on:
 jobs:
   build-ios:
     name: Build iOS IPA
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -18,6 +18,9 @@ jobs:
         with:
           channel: 'stable'
           cache: true
+
+      - name: Pre-create build directory for SPM
+        run: mkdir -p build/ios/SourcePackages
 
       - name: Install dependencies
         run: flutter pub get
