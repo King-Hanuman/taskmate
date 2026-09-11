@@ -29,7 +29,6 @@ dependencies:
   # Utilities
   intl: ^0.20.3
   uuid: ^4.6.0
-  connectivity_plus: ^7.3.1
   image_picker: ^1.2.3
 
 dev_dependencies:
